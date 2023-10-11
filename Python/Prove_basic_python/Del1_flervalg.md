@@ -15,9 +15,9 @@
     - [ ] `variabel: "123"`
 
 3. **Hva vil koden `print(5 * 3)` vise?**
-    - [ ] `15`
+    - [x] `15`
     - [ ] `53`
-    - [x] `8`
+    - [ ] `8`
     - [ ] `Error`
 
 4. **Hva vil koden `print(12 % 5)` vise?**
