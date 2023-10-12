@@ -110,10 +110,10 @@ else:
 
 ## Oppgave 7 
 Gitt en variabel `temperatur`. Skriv kode som sjekker og skriver ut om det er "svært varmt", "varmt", "kjølig" eller "kaldt" basert på følgende temperaturintervaller:
-- Svært varmt: \( \text{temperatur} > 30 \)
-- Varmt: \( 25 < \text{temperatur} \leq 30 \)
-- Kjølig: \( 10\leq \text{temperatur} \leq 25 \)
-- Kaldt: \( \text{temperatur} < 10 \)
+- Svært varmt: $$ \text{temperatur} > 30 $$
+- Varmt: $$ 25 < \text{temperatur} \leq 30 $$
+- Kjølig: $$ 10\leq \text{temperatur} \leq 25 $$
+- Kaldt: $$ \text{temperatur} < 10 $$
 
 Skriv ferdig dette programmet.
 ```python
