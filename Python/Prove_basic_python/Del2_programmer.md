@@ -33,7 +33,7 @@ print(f"Velkommen, {etternavn}!")
 
 ## Oppgave 3
 Gitt to variabler `hoyde` og `bredde` som representerer henholdsvis høyden og bredden til et rektangel. Gi høyden verdien 4 og bredden verdien 8. Skriv kode som beregner og skriver ut omkretsen av rektangelet.
-*Tips: Formelen for omkretsen er omkrets = \(2 \times \text{høyde}\) + \(2 \times \text{bredde}\).*
+*Tips: Formelen for omkretsen er omkrets = $2 \times \text{høyde}$ + $2 \times \text{bredde}$.*
 ```python
 hoyde = ...
 ... = 8
@@ -110,10 +110,10 @@ else:
 
 ## Oppgave 7 
 Gitt en variabel `temperatur`. Skriv kode som sjekker og skriver ut om det er "svært varmt", "varmt", "kjølig" eller "kaldt" basert på følgende temperaturintervaller:
-- Svært varmt: \(\text{temperatur} > 30\)
-- Varmt: \(25 < \text{temperatur} \leq 30\)
-- Kjølig: \(10\leq \text{temperatur} \leq 25\)
-- Kaldt: \(\text{temperatur} < 10\)
+- Svært varmt: $\text{temperatur} > 30$
+- Varmt: $25 < \text{temperatur} \leq 30$
+- Kjølig: $10\leq \text{temperatur} \leq 25$
+- Kaldt: $\text{temperatur} < 10$
 
 Skriv ferdig dette programmet.
 ```python
@@ -246,7 +246,7 @@ print(f"Du har løpt totalt {totalt_sekunder} sekunder i dag.")
 
 ## Oppgave 14 
 Lag et program som trekker tre tall fra 1 til 10 ved hjelp av `randint`. Programmet skal deretter skrive ut gjennomsnittet av de tre tallene.
-*Tips: Gjennomsnittet av f.eks. 6, 2 og 4 beregnes slik: \(\frac{6+2+4}{3}=4\).*
+*Tips: Gjennomsnittet av f.eks. 6, 2 og 4 beregnes slik: $\frac{6+2+4}{3}=4$.*
 ### Løsning
 ```python
 from random import randint
@@ -261,7 +261,7 @@ print(f"Gjennomsnittet av {tall1}, {tall2} og {tall3} er {gjennomsnitt}.")
 
 ## Oppgave 15 
 Lag et program der brukeren kan oppgi prisen på to forskjellige varer. Hvis den totale prisen overstiger 700 kr, får brukeren en rabatt på 15%. Programmet skal vise den endelige summen etter rabatt.
-*Tips: 15 % rabatt av f.eks. 200 kroner beregnes slik: \(200 \times 0.15\).*
+*Tips: 15 % rabatt av f.eks. 200 kroner beregnes slik: $200 \times 0.15$.*
 ### Løsning
 ```python
 pris1 = float(input("Oppgi prisen på den første varen: "))
