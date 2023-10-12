@@ -176,9 +176,7 @@ initial_fornavn = fornavn[0]  # Den første bokstaven
 ### Løsning
 ```python
 fornavn = input("Oppgi ditt fornavn: ")
-etternavn = input("Oppgi d
-
-itt etternavn: ")
+etternavn = input("Oppgi ditt etternavn: ")
 initial_fornavn = fornavn[0].upper()  # Den første bokstaven
 initial_etternavn = etternavn[0].upper()  # Den første bokstaven
 print(initial_fornavn + initial_etternavn)
