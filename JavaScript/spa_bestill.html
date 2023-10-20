@@ -7,7 +7,32 @@
 </head>
 <body>
    <h1>Velkommen til Saras Spa!</h1> 
+   <img width="25%" src="https://cms.britannia.no/wp-content/uploads/2019/02/Britannia-Spa_photo-DreyerHensley_Job_12154-1024x768.jpg">
+   <p>Prisen er 750 kr per time for inngang.</p>
+   <input id="inpTimer" type="number" placeholder="Antall timer">
+
+    <!--TODO:
+    Finn bilde av Nadia. La brukeren velge antall
+timer med Nadia, beregn totalpris. Nadia+inngang.
+-->
+   <p>Antall timer med Nadia: Vår beste massør.
+    1250 kr per time.
+   </p>
    <img src="">
-   <p>Prisen er 750 kr per time</p>
+   <input id="inpTimerNadia" type="number">
+
+   <button id="btnBestill">Bestill Spa</button>
+
+   <script>
+    function bestill(){
+        // Dette skjer når knappen trykkes
+        timer = inpTimer.value;
+        pris = timer * 750; 
+        utskrift = "Prisen blir " + pris + " kr.";
+        alert(utskrift);
+    }
+    // Kjør funksjonen bestill når knappen trykkes på
+    btnBestill.onclick = bestill;
+   </script>
 </body>
 </html>
