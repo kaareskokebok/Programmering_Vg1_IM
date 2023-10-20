@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Oppgi navnet ditt!</h1>
+    Fornavn:<input id="inpNavn" type="text"><br>
+    Etternavn:<input id="inpEtternavn" type="text"><br>
+    <!--
+        TODO: Lag et input-element med id "inpEtternavn",
+        når knappen trykkes skal hilsen vises på formen:
+        Hei, Per Pettersen.
+    -->
+    <button id="btnHilse">Gi meg en hilsen</button>
+    <p id="txtUt">Hei, Arne.</p>
+
+    <script>
+        function lagHilsen(){
+            navn = inpNavn.value;
+            etternavn = inpEtternavn.value;
+            txtUt.textContent = "Hei, " + navn + " " + etternavn;
+        }
+        btnHilse.onclick = lagHilsen;
+    </script>
+</body>
+</html>

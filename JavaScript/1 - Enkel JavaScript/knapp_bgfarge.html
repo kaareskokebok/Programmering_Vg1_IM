@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knapp bg-farge</title>
+    <style>
+        body{
+            background-color: burlywood;
+        }
+        h1{
+            background-color: aquamarine;
+            font-size:36pt;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Min første nettside med knapp</h1>
+    <p>Jeg liker knapper</p>
+    <button id="minBtn">Trykk på meg</button>
+    <button id="minBtn1">Bytt tilbake</button>
+
+    <script>
+        function knappTrykket(){
+            document.body.style = "background-color:red";
+        }
+        function knappTrykket1(){
+            document.body.style = "background-color:burlywood";
+        }
+        minBtn.onclick = knappTrykket;
+        minBtn1.onclick = knappTrykket1;
+    </script>
+</body>
+</html>
