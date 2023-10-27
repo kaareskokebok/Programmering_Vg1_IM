@@ -18,11 +18,11 @@
         function beregn(){
             // Når knappen trykkes
             // 1. Les inn timer fra inpTimer, lagre i variabelen timer
-
+            timer = inpTimer.value;
             // 2. Beregn lonn, lagre i variabelen lonn. Tips: 145*timer
-
+            lonn = 145 * timer
             // 3. Skriv ut resultatet i txtUt, bruk txtUt.textContent = ...
-            
+            txtUt.textContent = "Lønna blir " + lonn + " kr.";
         }
         minBtn.onclick = beregn;
     </script>
