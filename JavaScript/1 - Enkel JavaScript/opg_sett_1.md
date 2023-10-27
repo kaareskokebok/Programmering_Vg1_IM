@@ -4,8 +4,8 @@
 
 **Krav:**
 - Tittelen på siden skal være "Karins Kjøretidskalkulator".
-- Nettsiden skal inneholde en forklarende tekst som informerer brukeren om at de kan beregne reisetiden basert på avstand og hastighet.
 - Det skal være et input-felt hvor brukeren kan oppgi avstand i kilometer.
+- Kari kjører i 80 km/t.
 - Det skal være en knapp som brukeren kan trykke på for å beregne kjøretiden.
 - JavaScript-koden skal hente brukerens input, utføre beregningen (avstand / hastighet), og deretter vise det beregnede resultatet på nettsiden.
 
