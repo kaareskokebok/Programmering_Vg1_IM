@@ -4,14 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lyd</title>
+    <style>
+       button{
+        background-color: antiquewhite;
+        color: brown;
+        margin: 20px;
+        padding:10px;
+        font-size: 30pt;
+       }
+       button:hover{
+        background-color: aquamarine;
+       }
+       button:active{
+        background-color: gainsboro;
+       }
+    </style>
 </head>
 <body>
     <h1>En fin sang</h1>
     <!-- <audio id="minLyd" controls src="etude10op5.mp3"> </audio> -->
     <audio id="minLyd" src="etude10op5.mp3"> </audio>
-    <button id="btnPlay">Spill av</button>
+    <button id="btnPlay">&#9654;</button>
     <button id="btnPause">Pause</button>
-    <button id="btnMute">Skru av lyd</button>
+    <button id="btnMute">Skru lyd av/på</button>
     <button id="btnSpolTilbake">Spol tilbake til start</button>
     <button id="btnSpolFrem">Spol 10 sek. frem</button>
 
@@ -20,7 +35,22 @@
         minLyd.muted = true; // Skrur av lyd
         minLyd.muted = false; // Skrur på lyd
         minLyd.currentTime = 50  // Setter tiden til 50 sek.
+        
+        UTFORDRING:
+        Når sangen er spilt ferdig, skal en alert-boks med meldingen
+        'FERDIG' dukket opp, og deretter skal body sin bakgrunnsfarge
+        bli rød!
         */
+       function spolFrem(){
+        // Spoler frem 10 sek.
+        minLyd.currentTime += 10;
+       }
+       function spolTilbake(){
+         minLyd.currentTime = 0;
+       }
+        function muteLyd(){
+            minLyd.muted = !minLyd.muted;
+        }
         function spillAv(){
             // En kodelinje for å spille minLyd
             minLyd.play();
@@ -28,6 +58,9 @@
         function pauseLyd(){
             minLyd.pause();
         }
+        btnSpolFrem.onclick = spolFrem;
+        btnSpolTilbake.onclick = spolTilbake;
+        btnMute.onclick = muteLyd;
         btnPause.onclick = pauseLyd;
         btnPlay.onclick = spillAv;
     </script>
