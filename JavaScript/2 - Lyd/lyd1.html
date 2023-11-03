@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyd</title>
+</head>
+<body>
+    <h1>En fin sang</h1>
+    <!-- <audio id="minLyd" controls src="etude10op5.mp3"> </audio> -->
+    <audio id="minLyd" src="etude10op5.mp3"> </audio>
+    <button id="btnPlay">Spill av</button>
+    <button id="btnPause">Pause</button>
+    <button id="btnMute">Skru av lyd</button>
+    <button id="btnSpolTilbake">Spol tilbake til start</button>
+    <button id="btnSpolFrem">Spol 10 sek. frem</button>
+
+    <script>
+        /* HJELP:
+        minLyd.muted = true; // Skrur av lyd
+        minLyd.muted = false; // Skrur på lyd
+        minLyd.currentTime = 50  // Setter tiden til 50 sek.
+        */
+        function spillAv(){
+            // En kodelinje for å spille minLyd
+            minLyd.play();
+        }
+        function pauseLyd(){
+            minLyd.pause();
+        }
+        btnPause.onclick = pauseLyd;
+        btnPlay.onclick = spillAv;
+    </script>
+</body>
+</html>
