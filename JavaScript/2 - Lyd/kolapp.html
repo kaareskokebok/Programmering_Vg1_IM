@@ -8,12 +8,14 @@
 <body>
     <h1>Trykk knappen for å trekke kølapp</h1>
     <button onclick="trekk()">Trekk lapp</button>
-    <p>Du er nr. 101 i køen.</p>
+    <p id="txtUt"></p>
 
     <script>
        function trekk(){
-        alert(kundenr);
-        alert("kundenr");
+        // Vise melding til kunden: Du er nr. xxx i køen.
+        txtUt.textContent = "Du er nr. 101 i køen.";
+        // Øke kundenr med 1
+        kundenr++;  // kundenr += 1 eller kundenr = kundenr + 1
        } 
 
        // Kundenummer begynner på 101
