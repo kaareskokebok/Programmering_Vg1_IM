@@ -9,6 +9,7 @@
     <h1>Trykk knappen for å trekke kølapp</h1>
     <button onclick="trekk()">Trekk lapp</button>
     <p id="txtUt"></p>
+    <audio id="soundClick" src="lyder/clicksound.mp3"></audio>
     
     <script>
        function trekk(){
@@ -16,8 +17,10 @@
         txtUt.textContent = `Du er nr. ${kundenr} i køen. Takk for at du venter.`;
         // Øke kundenr med 1
         kundenr++;  // kundenr += 1 eller kundenr = kundenr + 1
+        // Spill av lyd
+        soundClick.play();
        } 
-
+       
        // Kundenummer begynner på 101
        let kundenr = 101;
     </script>
