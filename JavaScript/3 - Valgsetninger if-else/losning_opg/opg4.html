@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Gjett tallet 1-10</h1>
+    <input id="inpGjett"><br>
+    <button onclick="gjett()">Sjekk svar</button>
+    <p id="txtUt"></p>
+
+    <script>
+        function gjett(){
+            let tall = Math.floor(Math.random()*10) + 1;
+            let gjett = inpGjett.value;
+
+            if (gjett == tall){
+                document.write("Riktig!");
+            }else if(gjett > tall){
+                document.write("For høyt!");
+            }else{
+                document.write("For lavt!");
+            }
+        }
+    </script>
+</body>
+</html>
