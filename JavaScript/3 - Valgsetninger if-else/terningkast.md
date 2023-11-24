@@ -1,4 +1,4 @@
-Selvfølgelig, her er en detaljert steg-for-steg guide med all nødvendig kode for å lage nettsiden:
+# Terningkast-nettside
 
 ### Grunnleggende Steg (1-10)
 
@@ -45,7 +45,7 @@ function kastTerningen() {
 </script>
 ```
 
-**Steg 7-10 er allerede inkludert i koden ovenfor.**
+**Forklaring**
 
 - Når knappen trykkes, kaller den på `kastTerningen`-funksjonen.
 - Funksjonen genererer et tilfeldig tall mellom 1 og 6.
@@ -53,16 +53,16 @@ function kastTerningen() {
 - Hvis tallet er 6, legges "Hurra!" til meldingen.
 - Meldingen vises i p-elementet med ID "resultat".
 
-### Utvidelsesoppgaver (11-13)
+### Utvidelsesoppgaver (7-9)
 
-**Steg 11: Endre Bakgrunnsfarge**
+**Steg 7: Endre Bakgrunnsfarge**
 - Oppgave: Skriv JavaScript-kode for å endre bakgrunnsfargen på nettsiden 
 hver gang terningen kastes. Rosa farge hvis 6-er, ellers lyseblå.
 
-**Steg 12: Telle Antall Kast**
+**Steg 8: Telle Antall Kast**
 - Oppgave: Legg til en teller som holder styr på hvor mange ganger terningen har blitt kastet. Vis denne telleren på nettsiden.
 
-**Steg 13: Lagre og Vis det forrige Resultatet**
+**Steg 9: Lagre og Vis det forrige Resultatet**
 - Oppgave: Lagre terningkast slik at nettsiden også husker det forrige kastet. Hver gang 
 du kaster, skal du også få vite hva du kastet på det forrige kastet.
 
