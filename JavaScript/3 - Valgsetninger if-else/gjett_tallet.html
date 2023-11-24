@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gjett</title>
+</head>
+<body>
+    <h1>Gjett tallet</h1>
+    <input id="inpTall" type="number">
+    <button onclick="gjett()">Gjett</button>
+    <p id="txtUt"></p>
+
+<script>
+    function gjett(){
+        // Dette skjer når knappen trykkes
+        // Lag et tilfeldig tall
+        let fasit = Math.floor(Math.random()*4);  // 0, 1, 2, 3
+        // Les inn tallet fra input-boksen
+        let gjett = inpTall.value;
+        // Undersøk om svaret er riktig
+        if (gjett == fasit){
+            txtUt.textContent = "Riktig";
+        }else{
+            txtUt.textContent = "Feil, rett svar var " + fasit;
+        }
+    }
+</script>
+</body>
+</html>

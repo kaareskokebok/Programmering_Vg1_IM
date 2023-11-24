@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tilfeldige tall</title>
+</head>
+<body>
+
+    <script>
+        // JavaScript
+        let tall = Math.random();  // Tilfeldig tall 0-1
+        document.write(tall);
+
+        tall = 5 * Math.random();  // Tilfeldig tall 0-5 
+        document.write("<br>" + tall);
+
+        tall = Math.floor(5*Math.random()); // Heltall 0, 1, 2, 3 eller 4
+        document.write("<br>" + tall);
+
+        let terning = Math.floor(6*Math.random()) + 1;  // 1, 2, 3, ..., 6
+        document.write("<br>" + terning);
+        // Terning
+    </script>
+</body>
+</html>
