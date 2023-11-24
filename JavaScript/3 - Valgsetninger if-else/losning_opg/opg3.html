@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Tilfeldig heltall fra -2 til 2
+        let tall = Math.floor(Math.random()*4 - 2);
+        document.write("Tallet er " + tall);
+        if (tall > 0){
+            document.write("<br>Tallet er positivt.");
+        }  else if (tall < 0){
+            document.write("<br>Tallet er IKKE positivt.");
+        }else{
+            document.write("<br>Tallet er 0.");
+        }
+    </script>
+</body>
+</html>
