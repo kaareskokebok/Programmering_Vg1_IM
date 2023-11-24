@@ -8,6 +8,14 @@ Når det står "Skriv et program", tolk dette som "Lag en nettside".
 
 3. **Sjekke for Null**: Skriv et program som sjekker om et tall er positivt, negativt eller null. Bruk `if`, `else if`, og `else`.
 
+1. **Terningkast Simulator**: Skriv et program som simulerer to terningkast (tilfeldig tall mellom 1 og 6). Bruk `if`-setninger til å skrive ut en spesiell melding hvis begge terningene er like.
+
+2. **Gjett et Tilfeldig Tall**: Lag et program som genererer et tilfeldig tall mellom 1 og 10. La brukeren gjette tallet, og bruk `if`-setninger til å gi tilbakemelding om gjetningen var for høy, for lav, eller korrekt.
+
+3. **Tilfeldig Vær Generator**: Skriv et program som genererer et tilfeldig tall for å representere værforhold (f.eks. 1 for sol, 2 for regn, 3 for snø). Bruk `if`-setninger til å skrive ut passende aktiviteter for hvert værforhold.
+
+4. **Lodd Trekning**: Lag et program som simulerer en lodd trekning. Generer et tilfeldig tall mellom 1 og 100. Bruk `if`-setninger til å bestemme og skrive ut om tallet er innenfor vinnerrekkevidden (f.eks. 1-50: vinner, 51-100: ikke vinner).
+
 4. **Alderskontroll**: Skriv et program som sjekker en persons alder og skriver ut om de er "barn" (under 12), "tenåring" (12 til 18), eller "voksen" (over 18).
 
 5. **Enkel Rangering**: Skriv et program som gir en student karakteren "Godkjent" hvis de har scoret over 50 poeng, og "Ikke godkjent" hvis de har scoret 50 poeng eller mindre.
