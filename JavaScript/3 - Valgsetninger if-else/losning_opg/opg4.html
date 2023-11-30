@@ -6,24 +6,23 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Gjett tallet 1-10</h1>
-    <input id="inpGjett"><br>
-    <button onclick="gjett()">Sjekk svar</button>
-    <p id="txtUt"></p>
+    <p>1. **Terningkast Simulator**: Skriv et program som simulerer to 
+        terningkast 
+        (tilfeldig tall mellom 1 og 6). Bruk `if`-setninger til å skrive ut en 
+        spesiell melding hvis begge terningene er like.</p>
+        <button onclick="kast()">Kast to terninger</button>
+        <p id="txtUt"></p>
 
-    <script>
-        function gjett(){
-            let tall = Math.floor(Math.random()*10) + 1;
-            let gjett = inpGjett.value;
+        <script>
+            function kast(){
+                let kast1 = Math.floor(Math.random()*6) + 1;
+                let kast2 = Math.floor(Math.random()*6) + 1;
 
-            if (gjett == tall){
-                document.write("Riktig!");
-            }else if(gjett > tall){
-                document.write("For høyt!");
-            }else{
-                document.write("For lavt!");
+                txtUt.innerHTML = `Terning 1: ${kast1}, terning 2: ${kast2}.`;
+                if (kast1 == kast2) {
+                    txtUt.innerHTML += "<br>Begge er like!";
+                }
             }
-        }
-    </script>
+        </script>
 </body>
 </html>

@@ -8,7 +8,9 @@ Når det står "Skriv et program", tolk dette som "Lag en nettside".
 
 3. **Sjekke for Null**: Skriv et program som sjekker om et tall er positivt, negativt eller null. Bruk `if`, `else if`, og `else`.
 
-1. **Terningkast Simulator**: Skriv et program som simulerer to terningkast (tilfeldig tall mellom 1 og 6). Bruk `if`-setninger til å skrive ut en spesiell melding hvis begge terningene er like.
+1. **Terningkast Simulator**: Skriv et program som simulerer to terningkast 
+(tilfeldig tall mellom 1 og 6). Bruk `if`-setninger til å skrive ut en 
+spesiell melding hvis begge terningene er like.
 
 2. **Gjett et Tilfeldig Tall**: Lag et program som genererer et tilfeldig tall mellom 1 og 10. La brukeren gjette tallet, og bruk `if`-setninger til å gi tilbakemelding om gjetningen var for høy, for lav, eller korrekt.
 
