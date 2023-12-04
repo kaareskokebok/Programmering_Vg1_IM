@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 8</title>
+</head>
+<body>
+    <p>**Alderskontroll**: Skriv et program som sjekker en 
+        persons alder og skriver ut om de er "barn" (under 12), 
+        "tenåring" (12 til 18), eller "voksen" (over 18).
+    </p>
+    <label for="inpAlder">Alder:</label><br>
+    <input id="inpAlder" type="number">
+    <button onclick="sjekkAlder()">Sjekk alder</button>
+    <p id="txtUt"></p>
+
+    <script>
+        function sjekkAlder(){
+            // Les inn alder
+            let alder = inpAlder.value;
+
+            if (alder < 12){
+                txtUt.textContent = "Barn";
+            } else if (alder < 18){
+                txtUt.textContent = "Tenåring";
+            } else {  // Tilsvarer else if (alder >= 18)
+                txtUt.textContent = "Voksen";
+            }
+        }
+
+    </script>
+</body>
+</html>
