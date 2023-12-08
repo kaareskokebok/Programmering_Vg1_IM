@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Julequiz</h1>
+    <p>Hvor mange dager er det til jul?</p>
+    <input id="inpDager" type="number">
+    <p>Hva er den vanligste maten på julaften i Norge?</p>
+    <input type="radio" name="julemat" value="ribbe">Ribbe<br>
+    <input type="radio" name="julemat" value="lutefisk">Lutefisk<br>
+    <input type="radio" name="julemat" value="pinnekjøtt">Pinnekjøtt<br>
+    <input type="radio" name="julemat" value="grandiosa">Pizza Grandiosa<br>
+    <input type="radio" name="julemat" value="julegrøt">Julegrøt<br>
+
+    <button onclick="sjekkSvar()">Sjekk svar</button>
+
+    <p id="txtUt"></p>
+
+    <script>
+        function sjekkSvar(){
+            let poeng = 0;
+            // Les inn svar fra spm 1
+            let dager = inpDager.value;
+            let fasitDager = 16;
+            // Sjekk svar mot fasit
+            if (dager == fasitDager){
+                // Riktig svar
+                poeng++;  // Øker poeng med 1
+            }
+
+            // Spm 2
+            // Finner value til input-feltet med navn julemat som er checked,
+            // dvs. haket av
+            let mat = document.querySelector('input[name="julemat"]:checked').value;
+            let fasitMat = "Ribbe";
+            // TODO: Sjekk svar mot fasit, øk poeng med 1 hvis riktig svar
+            // Skriv koden her
+
+            txtUt.textContent = `Du fikk ${poeng} poeng av 2 mulige.`;
+
+        }
+        // TODO: Legg til to spørsmål til, ett med type="text" og en med flervalg
+        // , dvs. type="radio".
+    </script>
+</body>
+</html>
