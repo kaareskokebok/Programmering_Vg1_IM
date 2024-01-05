@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burgerbestilling</title>
+    <style>
+        img{
+            width: 150px;
+        }
+        input{
+            width: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Velkommen til Birgers Burgersjappe</h1>
+
+    <img src="bilder/burger.png" alt="Bilde av en burger">
+    <br>
+    <button onclick="minkBurgere()">-</button> 
+    <input id="inpAntBurgere" type="number"> 
+    <button onclick="okBurgere()">+</button>
+
+    <script>
+        function okBurgere(){
+            burgere++; // Øke med 1
+            // Oppdater visningen av antall burgere i input-feltet
+            inpAntBurgere.value = burgere;
+        }
+
+        function minkBurgere(){
+            // TODO. Tips: veldig likt okBurgere-funksjonen.
+        }
+
+
+        // I begynnelsen er antall burgere 0
+        let burgere = 0;
+        inpAntBurgere.value = burgere;
+
+    </script>
+</body>
+</html>
