@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burgerbestilling</title>
+    <style>
+        img{
+            width: 150px;
+        }
+        input{
+            width: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Velkommen til Birgers Burgersjappe</h1>
+
+    <img src="bilder/burger.png" alt="Bilde av en burger">
+    <br>
+    <button onclick="minkBurgere()">-</button> 
+    <input id="inpAntBurgere" type="number"> 
+    <button onclick="okBurgere()">+</button>
+
+    <br>
+    <img src="bilder/pf.png" alt="Bilde av pf">
+    <br>
+    <button onclick="minkPf()">-</button> 
+    <input id="inpAntPf" type="number"> 
+    <button onclick="okPf()">+</button>
+    <br>
+
+    <button onclick="bestill()">Bestill</button>
+
+    <p id="txtUt"></p>
+    <script>
+        function bestill(){
+            let totalPris = burgere * prisBurger + pf * prisPf;
+            let kvittering = `Din kvittering:<hr>
+            Burgere: ${burgere} <br>
+            PF: ${pf} <br>
+            Pris: ${totalPris} kr <br>
+            <br>
+            Velkommen tilbake til Birgers Burgersjappe.`;
+            // txtUt er id til et p-element
+            txtUt.innerHTML = kvittering;
+        }
+        function okBurgere(){
+            burgere++; // Øke med 1
+            // Oppdater visningen av antall burgere i input-feltet
+            inpAntBurgere.value = burgere;
+        }
+        function minkBurgere(){
+            burgere--;  
+            if (burgere < 0){  // Tillater ikke negativt antall burgere
+                burgere = 0;
+            }
+            inpAntBurgere.value = burgere;
+        }
+        function minkPf(){
+            if (pf === 0){
+                return;  // Avslutt funksjonen dersom pf er 0
+            }
+            pf--;
+            inpAntPf.value = pf;
+        }
+        function okPf(){
+            pf++;
+            inpAntPf.value = pf;
+        }
+        
+
+        // I begynnelsen er antall burgere 0
+        let burgere = 0;
+        let prisBurger = 85;
+        inpAntBurgere.value = burgere;
+
+        // Gjør tilsvarende for pommes frites (påmfri)
+        let pf = 0;
+        let prisPf = 38;
+        inpAntPf.value = pf;  
+
+    </script>
+</body>
+</html>
