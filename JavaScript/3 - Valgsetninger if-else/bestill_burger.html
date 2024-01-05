@@ -22,21 +22,39 @@
     <input id="inpAntBurgere" type="number"> 
     <button onclick="okBurgere()">+</button>
 
+    <br>
+    <button onclick="bestill()">Bestill</button>
+
+    <p id="txtUt"></p>
     <script>
+        function bestill(){
+            let totalPris = burgere * prisBurger;
+            let kvittering = `Din kvittering:<hr>
+            Burgere: ${burgere} <br>
+            Pris: ${totalPris} kr <br>
+            <br>
+            Velkommen tilbake til Birgers Burgersjappe.`;
+            // txtUt er id til et p-element
+            txtUt.innerHTML = kvittering;
+        }
         function okBurgere(){
             burgere++; // Øke med 1
             // Oppdater visningen av antall burgere i input-feltet
             inpAntBurgere.value = burgere;
         }
-
         function minkBurgere(){
             // TODO. Tips: veldig likt okBurgere-funksjonen.
+            burgere--;  
+            inpAntBurgere.value = burgere;
         }
-
+        
 
         // I begynnelsen er antall burgere 0
         let burgere = 0;
+        let prisBurger = 85;
         inpAntBurgere.value = burgere;
+
+        // Gjør tilsvarende for pommes frites (påmfri)  
 
     </script>
 </body>
