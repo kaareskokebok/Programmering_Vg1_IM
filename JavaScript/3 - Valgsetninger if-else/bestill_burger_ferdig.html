@@ -21,8 +21,8 @@
     <button onclick="minkBurgere()">-</button> 
     <input id="inpAntBurgere" type="number"> 
     <button onclick="okBurgere()">+</button>
-
     <br>
+    
     <img src="bilder/pf.png" alt="Bilde av pf">
     <br>
     <button onclick="minkPf()">-</button> 
@@ -30,6 +30,13 @@
     <button onclick="okPf()">+</button>
     <br>
 
+    <img src="bilder/coca.png" alt="Bilde av coca">
+    <br>
+    <button onclick="minkCoca()">-</button> 
+    <input id="inpAntCoca" type="number"> 
+    <button onclick="okCoca()">+</button>
+
+    <br>
     <button onclick="bestill()">Bestill</button>
 
     <p id="txtUt"></p>
@@ -68,6 +75,18 @@
             pf++;
             inpAntPf.value = pf;
         }
+        function minkCoca(){
+            if(coca === 0){
+                return;
+            }
+            coca--;
+            inpAntCoca.value = coca;
+
+        }
+        function okCoca(){
+            coca++;
+            inpAntCoca.value = coca;
+        }
         
 
         // I begynnelsen er antall burgere 0
@@ -80,6 +99,9 @@
         let prisPf = 38;
         inpAntPf.value = pf;  
 
+        let coca = 0;
+        let prisCoca = 29;
+        inpAntCoca.value = coca;
     </script>
 </body>
 </html>
