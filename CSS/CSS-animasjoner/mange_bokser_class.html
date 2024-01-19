@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .greenbox{
+            background-color: green;
+            margin:30px;
+            width: 100px;
+            height: 50px;
+            transition: 2s;
+        }
+        .greenbox:hover{
+            transform: rotateZ(360deg);
+        }
+        .greenbox:hover + .greenbox {
+            transform: rotateZ(360deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="greenbox"></div>
+    <div class="greenbox"></div>
+    <div class="greenbox"></div>
+    <div class="greenbox"></div>
+</body>
+</html>

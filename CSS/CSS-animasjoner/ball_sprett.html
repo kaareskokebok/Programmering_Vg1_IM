@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ballNed{
+            background-color: blue;
+            /* Lage sirkel med radius 50px, 100px er diameter */
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            /* Plassere sirkelen 200px fra venstre kant, 100px fra toppen */
+            position: absolute;
+            left: 200px;
+            top: 100px;
+            /* Overgang på 2s */
+            transition: 2s;
+        }
+        /* #ballNed:hover{
+            top: 300px;
+        } */
+
+        /* NB! Fungerer bare når elementet slippBall ligger rett før
+        ballNed */
+        #slippBall:hover + #ballNed{
+            top:300px;
+        }
+    </style>
+</head>
+<body>
+    <button id="slippBall">Slipp ball</button>
+    <div id="ballNed"></div>
+    <!-- Oppgaven:
+        Lag en ball til lenger til høyre på skjermen. Når den andre knappen
+    holdes over, skal ballen fly oppover på skjermen. La ballen være grønn.
+    -->
+    <button>Slem knapp</button>
+</body>
+</html>

@@ -10,17 +10,26 @@
             width: 300px;
             height: 150px;
             transition: 1s;
-            margin-top: 20%;
-            margin-left: 30%;
         }
         #boks:hover{
             transform: scale(3);
+        }
+        #boksMindre {
+            width: 200px;
+            height: 120px;
+            background-color: green;
+            transition: 0.3s; 
+        }
+
+        #boksMindre:hover {
+            transform: scale(0.5);
+            background-color: red;
         }
     </style>
 </head>
 <body>
     <div id="boks">Min boks</div>
-    
+    <div id="boksMindre"></div>
     <!-- Oppgave:
     Lag en ny boks med id boksMindre. Denne har bredde
 200px og høyde 120 px. Bakgrunnsfarge grønn. Når musa holdes over, 
