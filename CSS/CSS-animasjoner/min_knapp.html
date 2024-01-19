@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #knapp{
+            display: flex;          /* Gjør knappen til en flex-container */
+            justify-content: center; /* Sentrerer innholdet horisontalt */
+            align-items: center; /*Sentrerer vertikalt*/
+            background-color: blue;
+            color:white;
+            width: 80px;
+            height: 40px;
+            cursor: pointer;
+            /* Overgangen tar 0,3 sekund */
+            transition: 0.3s; 
+        }
+        /* Stil når musepekeren holdes over */
+        #knapp:hover{
+            background-color: darksalmon;
+            color:black;
+        }
+        /* Stil når man trykker på knappen, så lenge museknappen holdes inne */
+        #knapp:active{
+            background-color:blanchedalmond;
+            color:black;
+            transform: translateX(3px) translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <div id="knapp">Trykk meg</div>
+</body>
+</html>
