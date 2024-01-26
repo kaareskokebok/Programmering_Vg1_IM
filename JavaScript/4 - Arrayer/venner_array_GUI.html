@@ -25,18 +25,22 @@
 
     <script>
         function visAntall(){
+            // TODO: Vis antall venner i listen ved å bruke lengden av 'venner' arrayet.
             txtUt.textContent = `Du har ${venner.length} venner`;
         }
         function sokNavn(){
             let sokenavn = inpNavn.value;
-            // TODO
+            // TODO: Søk gjennom 'venner' arrayet for å finne om navnet 'sokenavn' eksisterer. 
+            // Vis resultatet i 'txtUt' elementet.
         }
         function leggTilVenn(){
-
+            // TODO: Legg til et nytt navn i 'venner' arrayet fra verdien i 'inpNavn'.
+            // Oppdater også teksten i 'txtUt' for å vise at en ny venn er lagt til.
         }
     
         function slettVennNavn(){
-
+            // TODO: Slett et navn fra 'venner' arrayet basert på navnet oppgitt i 'inpNavn'.
+            // Oppdater 'txtUt' for å vise at vennen er slettet.
         }
         // Lagre venner med array
         let venner = ["arne", "per", "sara", "oliver", "marcus"];
