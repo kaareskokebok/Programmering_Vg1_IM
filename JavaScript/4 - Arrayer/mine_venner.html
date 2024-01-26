@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mine venner</title>
+</head>
+<body>
+    
+    <script>
+        let venn1 = "arne";
+        let venn2 = "per";
+        let venn3 = "sara";
+
+        // Lagre venner med array
+        let venner = ["arne", "per", "sara"];
+
+        // Skrive ut alle venner
+        console.log(venner);
+
+        // Skrive ut per
+        console.log(venner[1]);
+        // Skrive ut 'arne er kjekk'. Der arne hentes fra venner
+        console.log(venner[0] + ' er kjekk');
+
+        // Skrive ut en venn som ikke finnes
+        console.log(venner[5]);  // undefined
+
+        // Endre venner
+        // arne byttes ut med ole
+        venner[0] = 'ole';
+        // bytt ut sara med siri
+        venner[2] = 'siri';
+        // Sjekk endring
+        console.log(venner);
+
+        // Legg til nye venner
+        // jens, ahmed, ramish
+        venner.push('jens');
+        venner.push('ahmed');
+        venner.push('ramish');
+        // Sjekk
+        console.log(venner);
+
+        // Antall venner
+        // Bruk venner.length til å skrive ut en setning
+        // 'du har 6 venner'
+        let setn = `Du har ${venner.length} venner`;
+        console.log(setn);
+
+        // Slett venn
+        // Slett siri (indeks 2)
+        // venner.splice(2, 1);  // slett 1, fom. indeks 2
+        // console.log(venner);
+        // // Slett tre venner fom. indeks 1
+        // venner.splice(1, 3);
+        // console.log(venner);
+
+        // finn index til en venn
+        console.log(venner);
+        console.log(venner.indexOf("ole"));  // 0
+        console.log(venner.indexOf("ahmed"));  // 4
+        // index til en venn som ikke finnes
+        console.log(venner.indexOf("aliah"));  // -1
+
+        // Eksempel på algoritme for søk
+        let sokenavn = "aliah";
+        
+        if (venner.indexOf(sokenavn) === -1){
+            console.log(sokenavn + " er ikke en venn.");
+        }else{
+            console.log(sokenavn + " er en venn.");
+        }
+    </script>
+</body>
+</html>
