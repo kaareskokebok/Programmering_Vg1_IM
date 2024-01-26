@@ -14,9 +14,8 @@
     <h1>Mine venner</h1>
     <label for="inpNavn">Navn:</label>
     <input id="inpNavn" type="text">
-    <label for="inpIndex">Index:</label>
-    <input id="inpIndex" type="number" min="0">
     <button onclick="visAntall()">Vis antall venner</button>
+    <button onclick="visAlleVenner()">Vis alle venner</button>
     <button onclick="sokNavn()">Søk på navn</button>
     <button onclick="leggTilVenn()">Legg til venn</button>
     <button onclick="slettVennNavn()">Slett venn etter navn</button>
@@ -27,6 +26,9 @@
         function visAntall(){
             // TODO: Vis antall venner i listen ved å bruke lengden av 'venner' arrayet.
             txtUt.textContent = `Du har ${venner.length} venner`;
+        }
+        function visAlleVenner(){
+            txtUt.textContent = venner.join(", ");
         }
         function sokNavn(){
             // TODO: Søk gjennom 'venner' arrayet for å finne om navnet 'sokenavn' eksisterer. 
