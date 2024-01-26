@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mine venner</title>
+    <style>
+        label, input{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mine venner</h1>
+    <label for="inpNavn">Navn:</label>
+    <input id="inpNavn" type="text">
+    <label for="inpIndex">Index:</label>
+    <input id="inpIndex" type="number" min="0">
+    <button onclick="visAntall()">Vis antall venner</button>
+    <button onclick="sokNavn()">Søk på navn</button>
+    <button onclick="leggTilVenn()">Legg til venn</button>
+    <button onclick="slettVennNavn()">Slett venn etter navn</button>
+    
+    <p id="txtUt"></p>
+
+    <script>
+        function visAntall(){
+            txtUt.textContent = `Du har ${venner.length} venner`;
+        }
+        function sokNavn(){
+            let sokenavn = inpNavn.value;
+            // TODO
+        }
+        function leggTilVenn(){
+
+        }
+    
+        function slettVennNavn(){
+
+        }
+        // Lagre venner med array
+        let venner = ["arne", "per", "sara", "oliver", "marcus"];
+
+    </script>
+</body>
+</html>
