@@ -1,4 +1,4 @@
-# OppgaveHåndtering av Frukter på et Fruktfat
+# Oppgave: Håndtering av Frukter på et Fruktfat
 
 #### Mål:
 Ta utgangspunkt i `fruktfat.html`. Du skal utforme en nettside hvor brukere kan interagere med et "fruktfat" gjennom å velge frukter de ønsker å "spise" fra en liste. Nettsiden skal oppdateres basert på brukerens handlinger med hensyn til tilgjengelige frukter på fatet.
