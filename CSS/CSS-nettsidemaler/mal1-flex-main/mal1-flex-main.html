@@ -6,11 +6,13 @@
     <meta name="description" content="Kort og tiltrekkende 
     beskrivelse av nettsiden">
     <title>Min Tittel</title>
+    <link rel="stylesheet" href="style.css">
     <!-- Søk på favicon for å få ikon ved siden av
     tittelen på fanen -->
 </head>
 <body>
     <header>
+        <div class="header-container">
         <!-- Hovedoverskrift, h1, og navigasjon, nav,
         skal ligge her -->
         <h1>Hovedoverskrift</h1>
@@ -18,25 +20,26 @@
             <!-- unnumbered list -->
             <ul>
                 <!-- li = list item -->
-                <li>Hjem</li>
-                <li>Om oss</li>
-                <li>Bildegalleri</li>
-                <li>Kontakt</li>
+                <li><a href="#">Hjem</a></li>
+                <li><a href="#">Om oss</a></li>
+                <li><a href="#">Bildegalleri</a></li>
+                <li><a href="#">Kontakt</a></li>
                 <!-- Skal være klikkbare lenker til
                 f.eks. kontakt.html, om_oss.html osv. -->
             </ul>
         </nav>
+    </div>
     </header>
 
     <main>
         <!-- Hovedinnhold, varierer fra en html-side til en annen -->
-    <section>
+    <section class="flex-item velkomst">
         <h2>Velkommen til oss</h2>
         <img src="https://picsum.photos/id/617/200/300" alt="Bildet av sjefen">
         <p>Kort introduksjon om hvem vi er og hva vi gjør</p>
     </section>
 
-    <section>
+    <section class="flex-item tilbud">
         <h2>Våre tilbud</h2>
         <p>Vi tilbyr ditt og datt. Her er noen eksempler:</p>
         <ul>

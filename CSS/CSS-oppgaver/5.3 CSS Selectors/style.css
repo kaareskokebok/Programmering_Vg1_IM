@@ -5,3 +5,15 @@ ol {
 }
 
 /* Write your CSS below, don't change the rules above. */
+/* Setter all elementer med class pene-knapper til blå tekstfarge */
+.pene-knapper{
+  color: blue;
+}
+
+/* Sett font-size til 24 px for elementet med id jens */
+#jens{
+  font-size: 24px;
+}
+li[value="2"]{
+  color: brown;
+}
