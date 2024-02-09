@@ -3,15 +3,22 @@
 #436850
 #ADBC9F
 #FBFADA */
+html{
+    background-color: black;
+}
  body{
-    margin:0;
+    margin:0 auto;
     padding:0px;
     height:100vh;
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
 }
  
 header, footer{
     background-color: #12372A;
     color: #FBFADA;
+    width:100%;
 }
 
 footer{
@@ -48,12 +55,15 @@ nav a{
 nav a:hover{
     color: #ADBC9F;
     transform: translateX(-4px) translateY(-4px);
-    box-shadow: 0 3px #ADBC9F; /* Simulate a bottom border */
+    /* box-shadow: 0 3px #ADBC9F; Simulate a bottom border */
+    box-shadow: 0 3px #FBFADA ;
 }
 
 main{
     display:flex;
     /* height:75vh; */
+    flex-grow:1;
+    width: 100%;
 }
 
 .velkomst{
