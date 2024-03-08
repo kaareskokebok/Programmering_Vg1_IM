@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" style="width: 100%;" oninput="sjekkTweet()" placeholder="Skriv tweet her" id="tweet">
+    <button onclick="sendTweet()">Send tweet</button>
+    <p id="txtUt"></p>
+
+    <script>
+        // Her begynner javascript
+        function sjekkTweet(){
+            let tekst = tweetInp.value;
+
+            let tegn =  tekst.length;
+            let tegnIgjen = maxTegn - tegn;
+            txtUt.textContent = `Du har brukt ${tegn} tegn.`;
+            txtUt.textContent += ` Du har ${tegnIgjen} tegn igjen.`;
+            if(tegn  > maxTegn){
+                tweetInp.value = 'bæsj';
+                tweetInp.style = "background-color:red";
+            }
+    }
+    
+    function sendTweet(){
+        let tekst = tweetInp.value;
+        // Slett all tekst over max tegn, og skriv ut denne
+        let tweetSent = tekst.slice(0, maxTegn);
+        // TODO: Skriv ut den sendte tweeten!
+        txtUt.textContent =  "Din tweet er sendt:\n";
+        txtUt.textContent += tweetSent;
+    }
+
+    let tweetInp = document.getElementById("tweet");
+    // TODO: Gjør tilsvarende for p-elementet med id="txtUt"
+    let txtUt = document.getElementById("txtUt");
+
+    let maxTegn = 30;
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:black;
+            margin:0;
+            height:100vh;
+            display: flex;
+            align-items:center;
+            justify-content: center;
+        }
+        .karusell-container{
+            width: 60%;
+            background-color: beige;
+            padding:0;
+            text-align: center;
+            position: relative;
+        
+        }
+        .karusell-container img{
+            display: block;
+            object-fit: cover; /* Change this from contain to cover */
+            width: 100%;
+        }
+        .carousel-button {
+
+  color: black; /* White text */
+  border: none; /* No border */
+  padding: 0px 10px; /* Padding around text */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 24px; /* Larger text size for visibility of symbols */
+  border-radius: 50%; /* Circular buttons */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effects */
+  position: absolute; /* Position buttons absolutely within the carousel container */
+  top: 50%; /* Align buttons vertically in the middle of the carousel */
+  transform: translateY(-50%); /* Ensure the middle alignment is perfect */
+  z-index: 1000; /* Make sure the buttons are above other content */
+}
+
+.carousel-button.previous {
+  left: 0px; /* Position the "Previous" button on the left */
+}
+
+.carousel-button.next {
+  right: 0px; /* Position the "Next" button on the right */
+}
+
+.carousel-button:hover {
+  background-color: lightgray; /* Darker blue background on hover */
+  /* transform: scale(1.1); Slightly increase size on hover */
+}
+
+    </style>
+</head>
+<body>
+    <div class="karusell-container">
+        <img src="" id="bilde" alt="">
+        <button class="carousel-button previous" onclick="forrige()">&#10094;</button>
+        <button class="carousel-button next" onclick="neste()">&#10095;</button>
+        
+    </div>
+
+    <script>
+        let bilder = ['bilde1.jpg', 'greenvalley.jpg', 'valley.jpg', 'valley3.jpg'];
+        // Vis det første bildet
+        bilde.src = "./images/" + bilder[0];  // 'bilde1.jpg'
+
+        let bildeIndex = 0;
+
+        function neste(){
+            // Øke bildeIndex med 1
+            bildeIndex++;
+            if (bildeIndex === bilder.length){
+                bildeIndex = 0;
+            }
+            // Oppdatere bilde.src
+            bilde.src = "./images/" + bilder[bildeIndex];
+        }
+
+        function forrige(){
+            // Øke bildeIndex med 1
+            bildeIndex--;
+            if (bildeIndex === -1){
+                bildeIndex = bilder.length - 1;
+            }
+            // Oppdatere bilde.src
+            bilde.src = "./images/" + bilder[bildeIndex];
+
+        }
+
+        function startKarusell(){
+            if (karusellSpilles){
+                clearInterval(timer);
+                karusellSpilles = false;
+                music.pause();
+            }else{
+                timer = setInterval(neste, 1000);
+           music.play();
+           karusellSpilles = true;
+            }
+           
+        }
+        bilde.onclick = startKarusell;
+        let timer;
+
+        // Lyd
+        let music = new Audio("./music/bgmusic.mp3");
+        let karusellSpilles = false;
+        
+    </script>
+</body>
+</html>

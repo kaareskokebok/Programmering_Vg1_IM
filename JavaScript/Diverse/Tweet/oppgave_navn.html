@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin:0;
+            background-color: black;
+        }
+        .melding-container{
+            width: 300px;
+            background-color: burlywood;
+            border-radius: 10%;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="melding-container">
+        <h1>Pent formatert navn</h1>
+        <p>Skriv ditt navn, og få en hyggelig hilsen.</p>
+        <input type="text" id="inpNavn" onchange="visHilsen()">
+    <p id="txtUt"></p>
+    </div>
+    
+
+    <script>
+        // TODO 1: Lag funksjonen visHilsen
+
+        // TODO 2: Inni funksjonen visHilsen, les inn navnet fra inpNavn, lagre i variabelen navn
+
+        // TODO 3: Skriv ut hilsen på formen 
+        // Hei, navn. Hyggelig å se deg!
+
+        // TODO 4: Bruk splice og toUpperCase for å gjøre den første bokstaven i navnet Stor
+
+        // TODO 5: Bruk splice og toLowerCase for å gjøre resten av navnet med små bokstaver
+        
+    let inpNavn =  document.getElementById('inpNavn');
+    let txtUt = document.getElementById("txtUt");
+
+    </script>
+</body>
+</html>

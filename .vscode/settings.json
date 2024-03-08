@@ -14,5 +14,6 @@
             "username": "root",
             "password": "uctoi7p83"
         }
-    ]
+    ],
+    "prettier.tabWidth": 4
 }

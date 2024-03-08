@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .fest-container{
+            background-color: pink;
+            width:40%;
+            margin-left:30%;
+            margin-top:15%;
+            padding:30px;
+            border-radius: 15px;
+            box-shadow: 12px 12px 2px 2px gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="fest-container">
+        <h1>VIP Fest</h1>
+        <p>Sjekk gjestens navn for invitasjon</p>
+        <input type="text" name="" id="inpNavn">
+        <button onclick="sjekkInv()">Sjekk invitasjon</button>
+        <p id="txtUt"></p>
+    </div>
+
+    <script>
+        let inviterte = ['arne', 'per', 'sara'];
+
+        function sjekkInv(){
+            // Når knappen trykkes, skjer dette
+            // 1. Les inn navn
+            let navn = inpNavn.value;
+            let navnLiten = navn.toLowerCase();
+            // 2. Sjekk om navnet er i inviterte-arrayet
+            if (inviterte.includes(navnLiten)){
+                txtUt.textContent = "Velkommen, " + navn;
+                // Slett navn fra inviterte
+                let navnIndex = inviterte.indexOf(navn);
+                inviterte.splice(navnIndex, 1);
+                if (inviterte.length === 0){
+                    // Alle inviterte gjester er kommet
+                    let festCont = document.querySelector(".fest-container");
+                    festCont.innerHTML = "<h1>VIP Festen er i gang.</h1>";
+                    festCont.innerHTML += "<p>Alle inviterte er kommet</p>";
+                }
+            }else{
+                txtUt.textContent = "Du er ikke invitert!";
+            }
+            // 3. Gi tilbakemelding både når navnet er blant inviterte og ikke
+            // 4. Fiks slik at det fungerer dersom brukeren skriver f.eks. Per eller sARa osv.
+            // Hint: toLowerCase()
+            // 5. Slett inviterte som allerede er sjekket inn
+
+        }
+    </script>
+</body>
+</html>
