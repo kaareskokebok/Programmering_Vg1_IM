@@ -14,12 +14,38 @@
     vis alle barn -->
         <!-- TODO: Lag knappen for å vise alle innsjekkede barn. Lag function visInnsjekkede som skriver ut innsjekkede barn-->
         <h1>BH-innsjekkern'</h1>
+        <input type="text" id="navn"><br>
+        <button onclick="sjekkInn()">Sjekk inn</button>
+        <button onclick="sjekkUt()">Sjekk ut</button>
         <button onclick="visInnsjekkede()">Vis innsjekkede</button>
         <button onclick="visUtsjekkede()">Vis utsjekkede</button>
         <button onclick="visAlle()">Vis alle barn</button>
-
+        
         <p></p>
         <script>
+            function sjekkUt(){
+                // 1. Les inn navn
+                // 2. Sjekk at navn er inkludert i innsjekkede-arrayet OG
+                // IKKE er i utsjekkede-arrayet
+                // 3. Legg til navn i utsjekkede
+                // 4. Fjern navn fra innsjekkede
+                // 5. Gi tilbakemeldinger
+            }
+            function sjekkInn(){
+                // 1. les inn navn
+                let navn = document.querySelector("#navn").value;
+                // 2. sjekk at:
+                //  barnet går i denne bh OG IKKE er sjekket inn
+                if (barneliste.includes(navn) && !innsjekkede.includes(navn)){
+                    // Ok, går i hagan
+                    txtUt.textContent = `${navn} ble sjekket inn.`;
+                    innsjekkede.push(navn);
+
+                }else{
+                    // Ikke ok, går ikke i hagan
+                    txtUt.textContent = `${navn} går ikke i bh.`;
+                }
+            }
             function visAlle() {
                 txtUt.textContent = barneliste.join(", ");
             }
@@ -33,6 +59,7 @@
                     txtUt.textContent = utsjekkede.join(", ");
                 }
             }
+
             let txtUt = document.querySelector("p");
             let barneliste = ["kristian", "jensern", "sara", "per"];
             let utsjekkede = [];
