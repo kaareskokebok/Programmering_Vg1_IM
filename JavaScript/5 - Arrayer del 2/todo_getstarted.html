@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Lag en nettside der du kan legge til TODO-oppgaver ved å skrive dem inn.
+Når du skal markere enn TODO som ferdig, kan du skrive inn index til TODO-oppgaven.
+Funksjonaliteter:
+
+	Vise TODO-oppgaver
+	Vise fullførte
+	Legge til ny TODO
+	Fullføre TODO -->
+    <h1>Min TODO-liste</h1>
+    <label for="inpTodo">TODO:</label><br>
+    <input type="text" id="inpTodo"><br>
+    <button onclick="visTODO()">Vis TODO-er</button>
+    <button onclick="visFullforte()">Fullførte</button>
+    <button onclick="leggTilTODO()">Legg til TODO</button>
+    <button onclick="fullforTODO()">Fullfør TODO</button>
+    <p></p>
+    <script>
+        function visTODO(){
+            txtUt.textContent = todos.join(", ");
+        }
+        function visFullforte(){
+            // Tilsvarende kode som visTODO
+
+        }
+        function leggTilTODO(){
+            // 1. Les inn todo
+            // 2. Legg til todo i arrayet todos
+            // 3. Gi tilbakemelding
+        }
+        function fullforTODO(){
+            // 1. Les inn indeksen til todoen som er fullført
+            // 2. Slett todoen fra arrayet todos
+            // 3. Legg til todoen i arrayet completed
+            // 4. Gi tilbakemelding
+        }
+        
+
+        let todos = ["måke snø", "gjøre lekser", "male huset"];
+        let completed = ["mate fuglen", "leke med rotta"];
+        let txtUt = document.querySelector("p");
+        let inpTodo = document.querySelector("#inpTodo");
+    </script>
+</body>
+</html>
