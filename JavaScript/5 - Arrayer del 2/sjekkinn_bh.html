@@ -14,34 +14,51 @@
     vis alle barn -->
         <!-- TODO: Lag knappen for å vise alle innsjekkede barn. Lag function visInnsjekkede som skriver ut innsjekkede barn-->
         <h1>BH-innsjekkern'</h1>
-        <input type="text" id="navn"><br>
+        <input type="text" id="navn" /><br />
         <button onclick="sjekkInn()">Sjekk inn</button>
         <button onclick="sjekkUt()">Sjekk ut</button>
         <button onclick="visInnsjekkede()">Vis innsjekkede</button>
         <button onclick="visUtsjekkede()">Vis utsjekkede</button>
         <button onclick="visAlle()">Vis alle barn</button>
-        
+
         <p></p>
         <script>
-            function sjekkUt(){
+            function sjekkUt() {
                 // 1. Les inn navn
                 // 2. Sjekk at navn er inkludert i innsjekkede-arrayet OG
-                // IKKE er i utsjekkede-arrayet
                 // 3. Legg til navn i utsjekkede
                 // 4. Fjern navn fra innsjekkede
                 // 5. Gi tilbakemeldinger
+
+                let navn = document.querySelector("#navn").value;
+
+                if (innsjekkede.includes(navn)) {
+                    txtUt.textContent = `${navn} er nå sjekket ut.`;
+                    utsjekkede.push(navn);
+                    // Slett fra innsjekkede
+                    let indexNavn = innsjekkede.indexOf(navn);
+                    innsjekkede.splice(indexNavn, 1);
+                } else {
+                    txtUt.textContent = `${navn} er ikke sjekket inn.`;
+                }
             }
-            function sjekkInn(){
+            function sjekkInn() {
                 // 1. les inn navn
                 let navn = document.querySelector("#navn").value;
                 // 2. sjekk at:
                 //  barnet går i denne bh OG IKKE er sjekket inn
-                if (barneliste.includes(navn) && !innsjekkede.includes(navn)){
+                if (barneliste.includes(navn)) {
                     // Ok, går i hagan
-                    txtUt.textContent = `${navn} ble sjekket inn.`;
-                    innsjekkede.push(navn);
-
-                }else{
+                    if (utsjekkede.includes(navn)){
+                        txtUt.textContent = `${navn} er allerede sjekket ut for dagen.`;
+                    }
+                    else if (innsjekkede.includes(navn)) {
+                        txtUt.textContent = `${navn} er allerede sjekket inn.`;
+                    } else {
+                        txtUt.textContent = `${navn} ble sjekket inn.`;
+                        innsjekkede.push(navn);
+                    }
+                } else {
                     // Ikke ok, går ikke i hagan
                     txtUt.textContent = `${navn} går ikke i bh.`;
                 }
@@ -53,9 +70,9 @@
                 txtUt.textContent = innsjekkede.join(", ");
             }
             function visUtsjekkede() {
-                if (utsjekkede.length === 0){
+                if (utsjekkede.length === 0) {
                     txtUt.textContent = "Ingen barn er sjekket ut.";
-                } else{
+                } else {
                     txtUt.textContent = utsjekkede.join(", ");
                 }
             }
