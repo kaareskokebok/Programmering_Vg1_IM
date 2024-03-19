@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- Funksjoner:
+    sjekke inn
+    sjekke ut
+    vis innsjekkede
+    vis utsjekkede
+    vis alle barn -->
+        <!-- TODO: Lag knappen for å vise alle innsjekkede barn. Lag function visInnsjekkede som skriver ut innsjekkede barn-->
+        <h1>BH-innsjekkern'</h1>
+        <button onclick="visInnsjekkede()">Vis innsjekkede</button>
+        <button onclick="visUtsjekkede()">Vis utsjekkede</button>
+        <button onclick="visAlle()">Vis alle barn</button>
+
+        <p></p>
+        <script>
+            function visAlle() {
+                txtUt.textContent = barneliste.join(", ");
+            }
+            function visInnsjekkede() {
+                txtUt.textContent = innsjekkede.join(", ");
+            }
+            function visUtsjekkede() {
+                if (utsjekkede.length === 0){
+                    txtUt.textContent = "Ingen barn er sjekket ut.";
+                } else{
+                    txtUt.textContent = utsjekkede.join(", ");
+                }
+            }
+            let txtUt = document.querySelector("p");
+            let barneliste = ["kristian", "jensern", "sara", "per"];
+            let utsjekkede = [];
+            let innsjekkede = ["kristian", "sara"];
+        </script>
+    </body>
+</html>

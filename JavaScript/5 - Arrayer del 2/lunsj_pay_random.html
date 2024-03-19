@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- IKKE SKRIV DETTE:
+    Når siden lastes, skal det velges tilfeldig en venn som skal betale lunsj.
+Resultatet presenteres på formen "Simen må spandere lunsj på alle!" -->
+<h1></h1>
+    <script>
+let venner = ["jens", "arne", "oliver", "simen", "herman", "ramish"];
+// TODO: Lag tilfeldig index
+// Math.random() -> gir tilfeldig tall mellom 0 og 1
+// Math.floor(4.8) -> 4, runder ned til nærmeste heltall
+// venner.length -> 6, gir antallet verdier i arrayet
+// LAG tilfeldig index fom. 0 tom. 5
+let tilfeldigIndex = Math.floor(Math.random()*6);
+let tekstElement = document.querySelector("h1");
+
+let venn = venner[tilfeldigIndex];
+tekstElement.textContent = `${venn} må spandere lunsj på alle!`;
+    </script>
+</body>
+</html>
+
