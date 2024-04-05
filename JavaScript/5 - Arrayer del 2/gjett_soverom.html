@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Gjett hva...</h1>
+    <h2>jeg har på rommet mitt...</h2>
+
+    <script>
+        let ting = ["sokker", "seng", "pult", "vindu", "lampe"];
+
+        // Anta at brukeren gjetter på en ting
+        let gjett = "seng";
+        if (ting.includes(gjett) ){
+            console.log("riktig");
+        }else{
+            console.log("feil");
+        }
+
+        // Slette akkurat den tingen brukeren gjetter på
+        // Brukeren har gjettet seng, det er riktig.
+        // Må finne indeksen til seng, og slette seng fra arrayet
+        let index = ting.indexOf(gjett);
+        ting.splice(index, 1);
+        console.log(ting);
+        
+
+    </script>
+</body>
+</html>
