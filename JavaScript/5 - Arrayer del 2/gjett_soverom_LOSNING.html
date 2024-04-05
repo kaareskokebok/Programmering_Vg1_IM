@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Implementer følgende i HTML:
+    1. Lag input felt der brukeren kan gjette.
+    2. Lag en knapp med teksten "Gjett".
+    3. Lag funksjon i script som utføres når Gjett trykkes. Ikke fyll den med innhold ennå.
+    3.5. Lag et p element hvor tekst fra javascript kan skrives ut.
+    4. Funksjonen i script skal skrive ut "Riktig" dersom brukeren gjetter riktig, ellers feil.
+    5. Funksjonen skal også slette elementet, dersom brukeren gjettet riktig.x
+    6. EKSTRA: Når alle elementer er gjettet riktig, skal det ikke lenger være mulig å gjette, og game over tekst dukker opp. 
+    7. EKSTRA 2: Legg til maks forsøk, f.eks. 10. Når forsøkene er brukt opp, avslør fasiten og gi poeng. -->
+    <h1>Gjett hva...</h1>
+    <h2>jeg har på rommet mitt...</h2>
+    <input type="text">
+    <button onclick="gjett()">Gjett</button>
+    <p></p>
+    
+
+    <script>
+        function gjett(){
+            // Les inn brukerens gjett
+            let gjett = txtInput.value;
+            // Sjekk om svaret er riktig og gi tilbakemelding
+            if (ting.includes(gjett)){
+                txtUt.textContent = "Riktig!";
+                // Slett fra arrayet
+                let index = ting.indexOf(gjett);
+                ting.splice(index, 1);
+                // Øker poeng med 1
+                poeng++;
+            }else{
+                txtUt.textContent = "Feil!";
+            }
+            forsok++;  // Forsøk øker uansett
+            let forsokIgjen = MAX_FORSOK - forsok;
+            txtUt.textContent += ` ${forsokIgjen} forsøk igjen.`;
+            sjekkGameOver()
+            
+        }
+
+        function sjekkGameOver(){
+            // Ekstra: "0" == 0 gir true men "0" === 0 gir false
+            if (ting.length === 0){
+                txtUt.textContent += ` Du klarte alle! ${poeng} poeng til deg!`;
+                document.querySelector("button").disabled = true;
+                return;
+            }
+            if (forsok === MAX_FORSOK){
+                txtUt.textContent += ` Game over! Du fikk ${poeng} poeng!`;
+                txtUt.innerHTML += `<br>Du manglet ${ting.join(" og ")}`;
+                document.querySelector("button").disabled = true;
+            }
+        }
+
+        let txtInput = document.querySelector("input");
+        let txtUt = document.querySelector("p");
+        let ting = ["sokker", "seng", "pult", "vindu", "lampe"];
+        let forsok = 0;
+        let poeng = 0;
+        const MAX_FORSOK = 8;
+    </script>
+</body>
+</html>
