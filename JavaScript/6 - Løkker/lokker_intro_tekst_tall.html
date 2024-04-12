@@ -27,7 +27,32 @@
             txtUt.innerHTML += "<br>Morn";
         }
 
-        // Lag en ny løkke som sier Morna 3 ganger
+        // Opg1: Lag en ny løkke som sier Morna 3 ganger
+        txtUt.innerHTML += "<hr>";
+        for (let i=0; i<3; i++){
+            // Følgende gjentas
+            // txtUt.innerHTML += i;
+            txtUt.innerHTML += "Morna<br>";
+        }
+        // Opg2: Lag en ny løkke som sier følgende:
+        // Morna for 1. gang 
+        // Morna for 2. gang 
+        // Morna for 3. gang 
+        // ... 
+        // Morna for 9. gang
+        txtUt.innerHTML += "<hr>";
+        let j = 1;
+        // txtUt.innerHTML += `Morna for ${j}. gang<br>`;
+        // j++;
+        // txtUt.innerHTML += `Morna for ${j}. gang<br>`;
+        // j++;
+        // txtUt.innerHTML += `Morna for ${j}. gang<br>`;
+        // osv. Nå med løkke
+        for (let i = 1 ; i <= 9; i++) {
+            txtUt.innerHTML += `Morna for ${i}. gang<br>`;
+        }
+
+        // Nedtelling fra 10 til 0. På 0 sier det BOOOM!.
         
     </script>
 </body>
