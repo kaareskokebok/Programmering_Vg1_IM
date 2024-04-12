@@ -52,8 +52,18 @@
             txtUt.innerHTML += `Morna for ${i}. gang<br>`;
         }
 
+        // Sletter alt tidligere innhold
+        txtUt.innerHTML = "";
         // Nedtelling fra 10 til 0. På 0 sier det BOOOM!.
-        
+        for(let i = 10; i > 0; i--){
+            txtUt.innerHTML += `${i}...<br>`;
+        }
+        txtUt.innerHTML += "BOOOM!";
+
+        // Lag nedtelling fra 15 til 5
+        for(let i = 15; i > 4; i--){
+            txtUt.innerHTML += `${i}...<br>`;
+        }
     </script>
 </body>
 </html>
