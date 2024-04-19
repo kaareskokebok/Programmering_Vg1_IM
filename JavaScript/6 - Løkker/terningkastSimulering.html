@@ -19,15 +19,20 @@
         // txtUt.textContent = tall;
 
         let antallKast = 50;
+        let antallSeksere = 0;
         // for(start; betingelse; endring)
-        for(let kastnr=1; kastnr < antallKast; kastnr++){
+        for(let kastnr=1; kastnr <= antallKast; kastnr++){
             tall = Math.floor(Math.random() * 6) + 1;
-            txtUt.innerHTML += tall + "<br>";
+            if (tall === 6){
+                antallSeksere++;
+            }
+            // txtUt.innerHTML += tall + "<br>";
+            txtUt.innerHTML += `${kastnr}.kast: ${tall} <br>`;
         }
-        // TODO: endre slik at utskriften blir på formen
-        // 1.kast: 4
-        // 2.kast: 3
-        // osv.
+        // Telle opp antall seksere
+        txtUt.innerHTML += `Antall seksere: ${antallSeksere}`;
+        // TODO: Telle opp antall enere
+        // Ekstra TODO: Telle opp antall ganger du får to like etter hverandre (vanskeligere)
     </script>
 </body>
 </html>
