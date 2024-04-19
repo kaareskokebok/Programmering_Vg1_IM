@@ -6,12 +6,28 @@
     <title>Dice Sim</title>
 </head>
 <body>
+    <!-- Programmet skal skrive ut resultatet av hvert terningkast, når vi kaster
+    50 ganger. -->
     <div class="txtContainer">
 
     </div>
 
     <script>
-        
+        let tall = Math.floor(Math.random() * 6) + 1;
+        // Gir første elementet med klassen txtContainer
+        let txtUt = document.querySelector(".txtContainer");
+        // txtUt.textContent = tall;
+
+        let antallKast = 50;
+        // for(start; betingelse; endring)
+        for(let kastnr=1; kastnr < antallKast; kastnr++){
+            tall = Math.floor(Math.random() * 6) + 1;
+            txtUt.innerHTML += tall + "<br>";
+        }
+        // TODO: endre slik at utskriften blir på formen
+        // 1.kast: 4
+        // 2.kast: 3
+        // osv.
     </script>
 </body>
 </html>
