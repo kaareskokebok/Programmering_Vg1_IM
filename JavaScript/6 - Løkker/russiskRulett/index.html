@@ -49,9 +49,14 @@
 
         function fyrAv(){
             // Sjekk hylseNr mot verdien til pistol-arrayet
-            if (pistol[hylseNr] === ???){
+            if (pistol[hylseNr] === 1){
                 // BANG!
+                let bangLyd = new Audio("./assets/sounds/gun-shoot.wav");
+                bangLyd.play();
+            }else{
+                // Fiks gun click lyd her
             }
+            hylseNr++;
         }
 
         let pistol = [];
