@@ -53,18 +53,30 @@
             if (pistol[hylseNr] === 1){
                 // BANG!
                 let bangLyd = new Audio("./assets/sounds/gun-shoot.wav");
+                bangLyd.currentTime = 0.8;
                 bangLyd.play();
                 // Endre txtUt her
+                txtUt.innerHTML += "Spiller: BANG! GAME OVER!<br>";
+                gameOver();  // egen funksjon for game over
 
             }else{
                 // Fiks gun click lyd her
-
+                let klikkLyd = new Audio("./assets/sounds/gun-click.wav");
+                klikkLyd.play();
                 // Endre txtUt her
-
+                txtUt.innerHTML += "Spiller: Klikk...<br>";
             }
             hylseNr++;
         }
 
+        function gameOver(){
+            // Dette skal også skje når spilleren taper
+            // TODO: endre litt stil, bakgrunnsfarger
+            // TODO: bruke display:none til å fjerne ting
+            // TODO: evt. bruke setTimeout til å å starte nytt spill
+            // etter noen sekunder.
+            
+        }
         let pistol = [];
         // Spillerens hylseNr begynner alltid på 0
         let hylseNr = 0;
