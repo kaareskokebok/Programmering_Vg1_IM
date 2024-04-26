@@ -17,13 +17,14 @@
     <p>Spilleren begynner...</p>
     <button onclick="fyrAv()">Fyr av!</button>
     <!-- txtUt må lages i javascript, men slik kan det f.eks. se ut når det spilles -->
-    <p id="txtUt">
-        Spiller: Klikk...<br>
+    <!-- Spiller: Klikk...<br>
         CPU: Klikk...<br>
         Runde 2:
         Spiller: Klikk...<br>
         CPU: BANG!<br>
-        Spiller vant! CPU død!
+        Spiller vant! CPU død! -->
+    <p id="txtUt">
+        
     </p>
     </div>
 
@@ -53,8 +54,13 @@
                 // BANG!
                 let bangLyd = new Audio("./assets/sounds/gun-shoot.wav");
                 bangLyd.play();
+                // Endre txtUt her
+
             }else{
                 // Fiks gun click lyd her
+
+                // Endre txtUt her
+
             }
             hylseNr++;
         }
@@ -65,6 +71,7 @@
         let spillContainer = document.getElementById("spillContainer");
         // Finner den første knappen i body
         let startKnapp = document.querySelector("button");
+        let txtUt = document.getElementById("txtUt");
     </script>
 </body>
 </html>
