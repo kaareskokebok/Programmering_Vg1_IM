@@ -15,7 +15,7 @@
 
     <div id="spillContainer">
     <p>Spilleren begynner...</p>
-    <button>Fyr av!</button>
+    <button onclick="fyrAv()">Fyr av!</button>
     <!-- txtUt må lages i javascript, men slik kan det f.eks. se ut når det spilles -->
     <p id="txtUt">
         Spiller: Klikk...<br>
@@ -34,8 +34,29 @@
             // Skjul start spill knapp
             startKnapp.style.display = "none";
             // Spill av bakgrunnsmusikken! TODO
-            
+
+            // Plasser patronen tilfeldig
+            let patronIndex = Math.floor(Math.random()*6);
+            for (let i=0; i<6; i++) {
+                if (i === patronIndex){
+                    pistol.push(1);  // patron her
+                }else{
+                    pistol.push(0);  // tomt her
+                }
+            }
+            console.log(pistol);
         }
+
+        function fyrAv(){
+            // Sjekk hylseNr mot verdien til pistol-arrayet
+            if (pistol[hylseNr] === ???){
+                // BANG!
+            }
+        }
+
+        let pistol = [];
+        // Spillerens hylseNr begynner alltid på 0
+        let hylseNr = 0;
         let spillContainer = document.getElementById("spillContainer");
         // Finner den første knappen i body
         let startKnapp = document.querySelector("button");
