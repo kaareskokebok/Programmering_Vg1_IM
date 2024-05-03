@@ -7,12 +7,22 @@
 </head>
 <body>
     <h1>Fødselsimulering</h1>
+    <input oninput="endretAntall()" type="range" min="1" max="100" value="10">
+    <div>10</div>
     <button onclick="simuler()">Simuler</button>
     <p></p>
     <img src="" width="150">
 
     <script>
-        
+        function endretAntall(){
+            // Dette skjer når vi endrer verdi på slidern
+            let inpAntall = document.querySelector("input");
+            let divAntall = document.querySelector("div");
+            // Les antall fra inpAntall
+            let antall = inpAntall.value;
+            // Skriv ut antallet i div
+            divAntall.textContent = antall;
+        }
         
         function simuler(){
             // Dette skjer når knappen trykkes
