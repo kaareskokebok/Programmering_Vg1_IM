@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fødselsimulering</title>
+</head>
+<body>
+    <h1>Fødselsimulering</h1>
+    <button onclick="simuler()">Simuler</button>
+    <p></p>
+    <img src="" width="150">
+
+    <script>
+        
+        
+        function simuler(){
+            // Dette skjer når knappen trykkes
+            // Lag tilfeldig tall mellom 0 og 1
+            
+            let tall = Math.random()*100;
+            txtUt.innerHTML = tall + "<br>";
+            // 51,4 prosent sannsynlighet for gutt.
+            if(tall < 51.4){
+                // TODO: skriv ut 'Det ble gutt'
+                txtUt.innerHTML += "Det ble gutt.";
+                bilde.src = "./images/gutt.webp";
+            } // TODO: Skriv ut 'Det ble jente' hvis tallet IKKE er mindre enn 51.4
+            else{
+                txtUt.innerHTML += "Det ble jente.";
+                bilde.src = "./images/jente.webp";
+            }
+            // TODO 3: Vis bildet av en gutt hvis gutt, og bildet av en jente hvis det ble jente
+        }
+        // Det første p-elementet
+        let txtUt = document.querySelector("p");
+        let bilde = document.querySelector("img");
+    </script>
+
+</body>
+</html>
