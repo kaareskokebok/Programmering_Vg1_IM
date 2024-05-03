@@ -25,11 +25,13 @@
         }
         
         function simuler(){
-            // Dette skjer når knappen trykkes
-            // Lag tilfeldig tall mellom 0 og 1
+            // Antall fødsler'
+            let antall = document.querySelector("input").value;
             
+           for(let i=0; i<antall; i++){
+            // Gjenta antall ganger
             let tall = Math.random()*100;
-            txtUt.innerHTML = tall + "<br>";
+            txtUt.innerHTML += "<br>" + tall + "<br>";
             // 51,4 prosent sannsynlighet for gutt.
             if(tall < 51.4){
                 // TODO: skriv ut 'Det ble gutt'
@@ -40,7 +42,10 @@
                 txtUt.innerHTML += "Det ble jente.";
                 bilde.src = "./images/jente.webp";
             }
-            // TODO 3: Vis bildet av en gutt hvis gutt, og bildet av en jente hvis det ble jente
+           }
+            // TODO løkke 1: Tell opp antall gutter og skriv dette ut etter løkka
+            // TODO løkke 2: Tell opp antall jenter og skriv dette ut etter løkka
+            // TODO EKSTRA CHALLENGE løkke 3: Bruk document.createElement("img") til å lage nye bildeelementer for hver fødsel, bruk så appendChild til å legge elementet til en bildecontainer-element
         }
         // Det første p-elementet
         let txtUt = document.querySelector("p");
